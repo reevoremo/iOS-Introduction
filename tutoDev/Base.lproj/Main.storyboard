@@ -29,9 +29,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kp6-1k-5iO">
-                                                    <rect key="frame" x="20" y="40" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kp6-1k-5iO">
+                                                    <rect key="frame" x="20" y="40" width="374" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -44,8 +43,11 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="kp6-1k-5iO" secondAttribute="trailing" constant="20" id="3fY-KG-LCU"/>
                                                 <constraint firstItem="Nva-Ns-aQ5" firstAttribute="leading" secondItem="eg9-po-yTA" secondAttribute="leadingMargin" id="Dzr-Wx-oGH"/>
+                                                <constraint firstItem="kp6-1k-5iO" firstAttribute="leading" secondItem="eg9-po-yTA" secondAttribute="leading" constant="20" id="KAy-xV-0FB"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Nva-Ns-aQ5" secondAttribute="trailing" id="TDb-LM-X2z"/>
+                                                <constraint firstItem="kp6-1k-5iO" firstAttribute="top" secondItem="Nva-Ns-aQ5" secondAttribute="bottom" constant="2" id="q2m-ks-2ws"/>
                                                 <constraint firstItem="Nva-Ns-aQ5" firstAttribute="top" secondItem="eg9-po-yTA" secondAttribute="topMargin" id="sHr-7x-XKv"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -72,11 +74,27 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="H8i-U0-zho" id="gqd-da-zDg"/>
+                        <segue destination="kYH-vy-JOa" kind="show" identifier="showDetail" id="fw7-TF-EzE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fUc-HJ-rbg">
+            <objects>
+                <viewController id="kYH-vy-JOa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ODu-6y-ZSJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rDK-A6-Wls"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rL5-eK-hOC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="894" y="114"/>
         </scene>
     </scenes>
 </document>

@@ -15,16 +15,26 @@ class TableViewController: UIViewController {
     
     var arrayFilms = [Film]()
     
+    var selectedFilm: Film?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        array = ["Super", "Fast", "super", "easy","Super", "Fast", "super", "easy","Super", "Fast", "super", "easy","Super", "Fast", "super", "easy","Super", "Fast", "super", "easy","Super", "Fast", "super", "easy"]
+
+        let film = Film("Avengers: EndGame", releasedOn: "2019", directedBy: "Russo Bros.", with:["Robert Downey Jr.", "Chris Evans"], description: "After the snap")
+        let film2 = Film.init("Avengers: Infinity War", releasedOn: "2017", directedBy: "Russo Bros.", with:["Robert Downey Jr.", "Chris Evans"], description: "Before the snap")
         
-        let film = Film("Avengers: EndGame", releasedOn: "2019")
-        let film2 = Film.init("Avengers: Infinity War", releasedOn: "2018")
         arrayFilms.append(film)
         arrayFilms.append(film2)
         
         print(arrayFilms)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard let detailViewController = segue.destination as? DetailViewController else {
+            return
+        }
+        detailViewController.film = selectedFilm
     }
 }
 
@@ -45,7 +55,8 @@ extension TableViewController: UITableViewDataSource {
 
 extension TableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(arrayFilms[indexPath.row].releaseYear)
+        selectedFilm = arrayFilms[indexPath.row]
+        performSegue(withIdentifier: "showDetail", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

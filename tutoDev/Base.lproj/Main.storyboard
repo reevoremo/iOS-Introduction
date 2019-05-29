@@ -82,16 +82,42 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="113.83928571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="fUc-HJ-rbg">
             <objects>
-                <viewController id="kYH-vy-JOa" sceneMemberID="viewController">
+                <viewController id="kYH-vy-JOa" customClass="DetailViewController" customModule="tutoDev" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ODu-6y-ZSJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Movie Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G31-8E-e6H">
+                                <rect key="frame" x="20" y="98" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaW-Kx-dpH">
+                                <rect key="frame" x="20" y="154" width="374" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QaW-Kx-dpH" firstAttribute="top" secondItem="G31-8E-e6H" secondAttribute="bottom" constant="20" id="55q-4M-yUg"/>
+                            <constraint firstItem="G31-8E-e6H" firstAttribute="leading" secondItem="rDK-A6-Wls" secondAttribute="leading" constant="20" id="7aC-X4-3yz"/>
+                            <constraint firstItem="rDK-A6-Wls" firstAttribute="trailing" secondItem="QaW-Kx-dpH" secondAttribute="trailing" constant="20" id="Bnd-bV-ucz"/>
+                            <constraint firstItem="QaW-Kx-dpH" firstAttribute="leading" secondItem="rDK-A6-Wls" secondAttribute="leading" constant="20" id="Br6-yT-wTO"/>
+                            <constraint firstItem="rDK-A6-Wls" firstAttribute="trailing" secondItem="G31-8E-e6H" secondAttribute="trailing" constant="20" id="OWu-MH-bFp"/>
+                            <constraint firstItem="G31-8E-e6H" firstAttribute="top" secondItem="rDK-A6-Wls" secondAttribute="top" constant="10" id="iw0-pa-lKa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rDK-A6-Wls"/>
                     </view>
+                    <connections>
+                        <outlet property="labelTitle" destination="G31-8E-e6H" id="Ab8-7P-Wef"/>
+                        <outlet property="labelYear" destination="QaW-Kx-dpH" id="LQy-I7-FAw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rL5-eK-hOC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,12 +10,18 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var labelYear: UILabel!
     var film : Film?
 
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupView()
         // Do any additional setup after loading the view.
+
     }
     
 
@@ -29,4 +35,8 @@ class DetailViewController: UIViewController {
     }
     */
 
+    func setupView(){
+        labelTitle.text = film?.title
+        labelYear.text = film?.releaseYear
+    }
 }

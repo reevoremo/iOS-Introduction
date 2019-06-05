@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  tutoDev
+//  randomuser
 //
-//  Created by Behan Remoshan on 24/04/2019.
+//  Created by Behan Remoshan on 05/06/2019.
 //  Copyright © 2019 Behan Remoshan. All rights reserved.
 //
 
